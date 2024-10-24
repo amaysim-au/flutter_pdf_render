@@ -480,8 +480,6 @@ class PdfViewerController extends TransformationController {
   PdfViewerController();
 
   /// Associated [PdfViewerState].
-  ///
-  /// FIXME: I don't think this is a good structure for our purpose...
   PdfViewerState? _state;
 
   /// Associate a [PdfViewerState] to the controller.
@@ -1114,6 +1112,7 @@ class PdfViewerState extends State<PdfViewer>
         for (int i = 0; i < _doc!.pageCount; i++) {
           pages.add(_PdfPageState._(pageNumber: i + 1, pageSize: pageSize1));
         }
+      // ignore: empty_catches
       } catch (e) {}
       _firstControllerAttach = true;
       _pages = pages;
@@ -1426,6 +1425,7 @@ class PdfViewerState extends State<PdfViewer>
       }
 
       _needRealSizeOverlayUpdate();
+    // ignore: empty_catches
     } catch (e) {}
   }
 

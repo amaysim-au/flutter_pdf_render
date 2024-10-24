@@ -1,3 +1,5 @@
+// ignore_for_file: non_nullable_equals_parameter
+
 import 'dart:async';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
